@@ -10,6 +10,7 @@ namespace Yatik_Task4.Models
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int ID { get; set; }
     [StringLength(20)]
+    //
     public string CenterName { get; set; }
     //public string CenterType { get; set; }
      public int SortOrder { get; set; }

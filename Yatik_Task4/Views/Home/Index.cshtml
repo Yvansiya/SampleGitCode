@@ -1,0 +1,36 @@
+﻿@model List<Center_Master>
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+ 
+<div class="text-center">
+    Total Records @ViewBag.cntcount
+    <table class="table table-border">
+     <tr>
+         <th>Center Id</th>
+         <th>Center Name</th>
+         <th>Sort </th>
+         <th>Is Active</th>
+     </tr>
+ 
+@foreach(var Master in Model)
+   {
+    <tr>
+        <td>@Master.ID</td>
+        <td>@Master.CenterName</td>
+        <td>@Master.SortOrder</td>
+        @if(Master.IsActive==true)
+        {
+            <td>Yes</td>
+        }
+        else
+        {
+            <td>No</td>
+        }
+    </tr>
+   }
+</table>
+</div>
+
